@@ -19,16 +19,16 @@ Apple's official tutorials designed for anyone new to building apps for Apple pl
 | Chapter | Topic | Tutorial | Code |
 |---------|-------|----------|------|
 | 1 | Hello, SwiftUI | [Apple Docs](https://developer.apple.com/tutorials/develop-in-swift/hello-swiftui) | |
-| 2 | Views, Structures & Properties | [Apple Docs](https://developer.apple.com/tutorials/develop-in-swift/customize-views-with-properties) | |
-| 3 | Layout & Style | [Apple Docs](https://developer.apple.com/tutorials/develop-in-swift/design-an-interface) | |
-| 4 | Buttons & State | [Apple Docs](https://developer.apple.com/tutorials/develop-in-swift/update-the-ui-with-state) | |
-| 5 | Lists & Text Fields | [Apple Docs](https://developer.apple.com/tutorials/develop-in-swift/create-dynamic-content) | |
+| 2 | Views, Structures & Properties | [Apple Docs](https://developer.apple.com/tutorials/develop-in-swift/customize-views-with-properties) | [WeatherForecast](SwiftUI/02_WeatherForecast) |
+| 3 | Layout & Style | [Apple Docs](https://developer.apple.com/tutorials/develop-in-swift/design-an-interface) | [OnboardingFlow](SwiftUI/03_OnboardingFlow) |
+| 4 | Buttons & State | [Apple Docs](https://developer.apple.com/tutorials/develop-in-swift/update-the-ui-with-state) | [DiceRoller](SwiftUI/04_DiceRoller) |
+| 5 | Lists & Text Fields | [Apple Docs](https://developer.apple.com/tutorials/develop-in-swift/create-dynamic-content) | [Pick-a-Pal](SwiftUI/05_Pick-a-Pal) |
 
 ### Data Modeling
 | Chapter | Topic | Tutorial | Code |
 |---------|-------|----------|------|
-| 6 | Custom types and Swift Testing | [Apple Docs](https://developer.apple.com/tutorials/develop-in-swift/welcome-to-data-modeling) | [ScoreKeeper](tutorial/06.%20ScoreKeeper/README.md) |
-| 7 | Models and persistence | [Apple Docs](https://developer.apple.com/tutorials/develop-in-swift/save-data) | |
+| 6 | Custom types and Swift Testing | [Apple Docs](https://developer.apple.com/tutorials/develop-in-swift/welcome-to-data-modeling) | [ScoreKeeper](DataModeling/Ch1_ScoreKeeper) |
+| 7 | Models and persistence | [Apple Docs](https://developer.apple.com/tutorials/develop-in-swift/save-data) | [Birthdays](DataModeling/Ch2_Birthdays) |
 | 8 | Navigation, editing, and relationships | [Apple Docs](https://developer.apple.com/tutorials/develop-in-swift/navigate-sample-data) | |
 | 9 | Observation and shareable data models | [Apple Docs](https://developer.apple.com/tutorials/develop-in-swift/complete-a-game-with-logic) | |
 
