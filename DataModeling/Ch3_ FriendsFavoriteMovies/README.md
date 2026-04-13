@@ -1,8 +1,15 @@
 # Ch3. Friends Favorite Movies App
  
 ## 📱 Preview
- 
-> ![Preview](https://github.com/sxbinn/Develop-in-Swift-Tutorials/issues/1#issue-4256156863)
+
+<p align="center">
+ <img width="300" alt="Image" src="https://github.com/user-attachments/assets/98918c64-d566-4073-a620-fc2bcd0d37fb" />
+ <img width="300" alt="Image" src="https://github.com/user-attachments/assets/08dc4b27-5898-4cc5-9aba-e12ae4e901ce" />
+ <img width="300" alt="Image" src="https://github.com/user-attachments/assets/d4536289-80cf-4700-9c45-851ed7c24e7a" />
+ <img width="300" alt="Image" src="https://github.com/user-attachments/assets/303e75a6-973e-4966-8bc4-ec7f2439851f" />
+ <img width="300" alt="Image" src="https://github.com/user-attachments/assets/f5e75ea5-c4a0-4077-bff6-a5ef2abab179" />
+ <img width="300" alt="Image" src="https://github.com/user-attachments/assets/213b2c3f-ac8d-4123-87af-440d84d84b57" />
+</p>
  
 ## 📚 학습한 내용
  
