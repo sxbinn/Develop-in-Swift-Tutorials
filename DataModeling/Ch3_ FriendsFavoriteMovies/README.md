@@ -1,12 +1,8 @@
 # Ch3. Friends Favorite Movies App
  
----
- 
 ## 📱 Preview
  
-> https://github.com/sxbinn/Develop-in-Swift-Tutorials/issues/1#issue-4256156863
- 
----
+> ![Preview](https://github.com/sxbinn/Develop-in-Swift-Tutorials/issues/1#issue-4256156863)
  
 ## 📚 학습한 내용
  
@@ -32,8 +28,6 @@
 ### 5. `SampleData` 싱글톤 패턴
 - `static let shared` 로 앱 전체에서 하나의 인스턴스만 사용
 - 프리뷰 전용 샘플 데이터를 캡슐화하여 복잡한 초기화 로직을 외부에서 숨김
- 
----
  
 ## 🔗 참고 링크
 - [Navigate Sample Data - Conclusion](https://developer.apple.com/tutorials/develop-in-swift/navigate-sample-data-conclusion)
