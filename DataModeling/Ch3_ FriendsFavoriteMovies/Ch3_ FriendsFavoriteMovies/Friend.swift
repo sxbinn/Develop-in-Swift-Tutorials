@@ -11,6 +11,7 @@ import SwiftData
 @Model
 class Friend {
     var name: String
+    var favoriteMovie: Movie?
     
     init(name: String) {
         // 내 이름 = 너가 준 이름

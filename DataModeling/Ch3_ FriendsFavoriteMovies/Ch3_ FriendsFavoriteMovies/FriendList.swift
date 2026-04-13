@@ -15,15 +15,21 @@ struct FriendList: View {
     
     var body: some View {
         NavigationSplitView {
-            List {
-                ForEach(friends) { friend in
-                    NavigationLink(friend.name) {
-                        FriendDetail(friend: friend)
-                            .navigationTitle(Text("Friend"))
-                            .navigationBarTitleDisplayMode(.inline)
+            Group {
+                if !friends.isEmpty {
+                    List {
+                        ForEach(friends) { friend in
+                            NavigationLink(friend.name) {
+                                FriendDetail(friend: friend)
+                                    .navigationTitle(Text("Friend"))
+                                    .navigationBarTitleDisplayMode(.inline)
+                            }
+                        }
+                        .onDelete(perform: deleteFriends(indexes:))
                     }
+                } else {
+                    ContentUnavailableView("Add Friends", systemImage: "person.and.person")
                 }
-                .onDelete(perform: deleteFriends(indexes:))
             }
             .navigationTitle(Text("Friends"))
             .toolbar {
@@ -68,4 +74,9 @@ struct FriendList: View {
     FriendList()
         .modelContainer(SampleData.shared.modelContainer)
     // inMemory: Preview용 임시 데이터 저장 방식.
+}
+
+#Preview("Empty List") {
+    FriendList()
+        .modelContainer(for: Friend.self, inMemory: true)
 }
