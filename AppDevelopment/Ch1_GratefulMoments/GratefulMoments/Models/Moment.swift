@@ -16,11 +16,18 @@ class Moment {
     var imageData: Data?
     var timestamp: Date
     
+    // Badge.moment 역관계
+    // 일대다 관계
+    // 뱃지는 하나의 모멘트에서만 획득,
+    // 하나의 모멘트는 여러 개의 뱃지를 해제 가능
+    var badges: [Badge]
+    
     init(title: String, note: String, imageData: Data? = nil, timestamp: Date = .now) {
         self.title = title
         self.note = note
         self.imageData = imageData
         self.timestamp = timestamp
+        self.badges = []
     }
     
     var image: UIImage? {

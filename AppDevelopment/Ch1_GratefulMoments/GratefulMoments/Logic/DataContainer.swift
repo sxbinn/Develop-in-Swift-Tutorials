@@ -12,6 +12,7 @@ import SwiftUI
 @MainActor
 class DataContainer {
     let modelContainer: ModelContainer
+    let badgeManager: BadgeManager
     
     var context: ModelContext {
         modelContainer.mainContext
@@ -20,6 +21,7 @@ class DataContainer {
     init(includeSampleMoments: Bool = false) {
         let schema = Schema([
             Moment.self,
+            Badge.self,
         ])
         
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: includeSampleMoments)
@@ -27,8 +29,16 @@ class DataContainer {
         do {
             modelContainer = try ModelContainer(for: schema, configurations: [modelConfiguration])
             
+            // ModelContainer랑 같이 묶어서 DataContainer에서 관리하자
+            // 의존성 주입
+            badgeManager = BadgeManager(modelContainer: modelContainer)
+            
+            // DataContainer가 생성될 때마다 모든 뱃지 불러옴
+            // 중복 로딩 방지
+            try badgeManager.loadBadgeIfNeeded()
+            
             if includeSampleMoments {
-                loadSampleMoments()
+                try loadSampleMoments()
             }
             try context.save()
         } catch {
@@ -36,9 +46,10 @@ class DataContainer {
         }
     }
     
-    private func loadSampleMoments() {
+    private func loadSampleMoments() throws {
         for moment in Moment.sampleData {
             context.insert(moment)
+            try badgeManager.unlockBadges(newMoment: moment)
         }
     }
 }
