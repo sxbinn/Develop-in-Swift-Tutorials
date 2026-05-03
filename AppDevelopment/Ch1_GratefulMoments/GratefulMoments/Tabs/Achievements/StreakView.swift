@@ -15,15 +15,25 @@ struct StreakView: View {
             VStack(spacing: 0) {
                 Text("Streak \(Image(systemName: "flame.fill"))")
                     .foregroundStyle(.ember)
-                Text("\(numberOfDays)")
-                    .font(.system(size: 70))
-                Text("Days")
+                Text(attributedText)
+                    .multilineTextAlignment(.center)
             }
             .font(.callout)
         }
     }
+    
+    var attributedText: AttributedString {
+        var attributedString = AttributedString(localized: "^[\(numberOfDays) \nDays](inflect: true)")
+        if let range = attributedString.range(of: "\(numberOfDays)") {
+            attributedString[range].font = .system(size: 70)
+            attributedString[range].foregroundColor = .ember
+        }
+        return attributedString
+    }
 }
 
 #Preview {
+    StreakView(numberOfDays: 0)
+    StreakView(numberOfDays: 1)
     StreakView(numberOfDays: 23)
 }
